@@ -12,7 +12,7 @@ ENV HUGGINGFACE_HUB_ADD_TOKEN_AS_GIT_CREDENTIAL=false
 ARG HF_AUTH_TOKEN
 
 # Log in to Hugging Face and download the model
-RUN huggingface-cli login --token $HF_AUTH_TOKEN
+RUN huggingface-cli login --token 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
 RUN huggingface-cli download microsoft/Phi-3-mini-4k-instruct-gguf Phi-3-mini-4k-instruct-q4.gguf --local-dir . --local-dir-use-symlinks False
 
 # Stage 2: Final image without secrets
